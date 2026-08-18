@@ -1,4 +1,6 @@
 .venv/
+.env
+.config/
 __pycache__/
 *.py[cod]
 /topics/

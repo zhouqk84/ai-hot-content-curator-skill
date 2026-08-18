@@ -21,8 +21,17 @@ description: 为抖音 AI 小白账号发现、核验和筛选实时热点选题
    - 使用 `verification_domains` 寻找官方或原始来源；
    - 使用 `heat_queries` 检索中文传播信号，抖音优先；无法直接访问抖音时，使用可公开检索的中文平台信号并标注“替代信号”。
 4. 对每个候选核对事件日期、原始出处和核心事实。淘汰无法定位原始来源、事实冲突或已失效的候选。
-5. 结合角色档案评分，按总分排序，只保留 5 个候选。
+5. 结合角色档案评分，按总分排序，只保留 5 个候选。默认由 Codex 评分；仅在用户明确指定时调用可选后端。
 6. 将结果写入原始候选同目录的 `selection.md`，并在对话中展示同一份内容；不要创建其他报告。
+
+## 可选评分后端
+
+调用外部后端前，先生成最多 20 条 `verified_candidates.json`。每条必须只含 `id`、`title`、`fact_summary`、`primary_sources`、`heat_signals`、`test_task`，不得包含角色档案原文或敏感信息。
+
+- WorkBuddy：确认本机已安装并登录，运行 `python scripts/score_candidates.py verified_candidates.json --provider workbuddy`。可用 `WORKBUDDY_COMMAND` 指定可执行文件。
+- 华为云：让用户自行设置 `HUAWEI_MAAS_ENDPOINT`、`HUAWEI_MAAS_MODEL`、`HUAWEI_MAAS_API_KEY`，不得索取或显示 Key；运行 `python scripts/score_candidates.py verified_candidates.json --provider huawei`。
+
+后端结果只作为评分意见。校验失败时报告原因，不自动切换提供商，不绕过用户选择。
 
 ## 评分
 
