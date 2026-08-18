@@ -1,85 +1,74 @@
 {
-    "sources": [
-        {
-            "category": "AI Podcasts & Interviews",
-            "type": "RSS",
-            "urls": [
-                "https://lexfridman.com/feed/podcast/",
-                "https://karpathy.github.io/feed.xml",
-                "http://blog.samaltman.com/posts.atom",
-                "https://blog.ycombinator.com/feed/",
-                "https://rss.art19.com/tim-ferriss-show",
-                "https://nav.al/feed"
-            ]
-        },
-        {
-            "category": "Tech & AI News",
-            "type": "Web",
-            "urls": [
-                "https://techcrunch.com/category/artificial-intelligence/",
-                "https://www.theverge.com/tech",
-                "https://news.ycombinator.com/",
-                "https://openai.com/blog",
-                "https://www.anthropic.com/news",
-                "https://blog.google/technology/ai/",
-                "https://www.ainews.com/",
-                "https://aivalley.ai/",
-                "https://github.com/liyupi/ai-guide"
-            ]
-        },
-        {
-            "category": "Thought Leadership & Newsletters",
-            "type": "Web",
-            "urls": [
-                "https://stratechery.com/",
-                "https://www.oneusefulthing.org/",
-                "https://www.lennysnewsletter.com/",
-                "https://bensbites.beehiiv.com/",
-                "https://peteryang.substack.com/",
-                "https://danwang.co/"
-            ]
-        },
-        {
-            "category": "Personal Growth & Philosophy",
-            "type": "Web",
-            "urls": [
-                "https://fs.blog/blog/",
-                "https://jamesclear.com/articles",
-                "https://paulgraham.com/articles.html"
-            ]
-        },
-        {
-            "category": "RSS Feeds",
-            "type": "RSS",
-            "urls": [
-                "http://feeds.feedburner.com/TechCrunch/",
-                "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
-                "https://stratechery.com/feed/",
-                "https://www.oneusefulthing.org/feed",
-                "https://www.lennysnewsletter.com/feed",
-                "https://news.smol.ai/rss.xml",
-                "https://www.404media.co/rss",
-                "https://magazine.sebastianraschka.com/feed",
-                "https://aibusiness.com/rss.xml",
-                "https://aimodels.substack.com/feed",
-                "https://www.artificialintelligence-news.com/feed/rss/",
-                "https://venturebeat.com/category/ai/feed/",
-                "https://aisnakeoil.substack.com/feed",
-                "https://deepmind.com/blog/feed/basic/",
-                "https://www.technologyreview.com/feed/",
-                "https://openai.com/blog/rss/",
-                "http://googleaiblog.blogspot.com/atom.xml",
-                "https://huggingface.co/blog/feed.xml",
-                "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml",
-                "https://www.theverge.com/rss/index.xml",
-                "https://simonwillison.net/atom/everything/",
-                "https://www.latent.space/feed",
-                "https://www.interconnects.ai/feed"
-            ]
-        }
-    ],
-    "search_params": {
-        "time_range": "last_week",
-        "include_timeless": true
+  "collection": {
+    "lookback_days": 14,
+    "max_candidates": 80,
+    "per_source": 20
+  },
+  "discovery_sources": [
+    {
+      "name": "AIHot",
+      "type": "aihot",
+      "layer": "chinese_heat",
+      "url": "https://aihot.today/"
+    },
+    {
+      "name": "Google Blog",
+      "type": "rss",
+      "layer": "official",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/rss/"
+    },
+    {
+      "name": "Simon Willison",
+      "type": "rss",
+      "layer": "expert_discovery",
+      "url": "https://simonwillison.net/atom/everything/"
+    },
+    {
+      "name": "One Useful Thing",
+      "type": "rss",
+      "layer": "expert_discovery",
+      "url": "https://www.oneusefulthing.org/feed"
+    },
+    {
+      "name": "Latent Space",
+      "type": "rss",
+      "layer": "expert_discovery",
+      "url": "https://www.latent.space/feed"
     }
+  ],
+  "verification_domains": [
+    "openai.com",
+    "anthropic.com",
+    "blog.google",
+    "deepmind.google",
+    "microsoft.com",
+    "github.com"
+  ],
+  "heat_queries": [
+    "抖音 AI 工具",
+    "抖音 Codex",
+    "抖音 AI 一人公司",
+    "小红书 AI 工具",
+    "哔哩哔哩 AI 工具",
+    "知乎 AI 一人公司"
+  ],
+  "relevance_keywords": [
+    "AI",
+    "人工智能",
+    "Codex",
+    "agent",
+    "智能体",
+    "automation",
+    "自动化",
+    "workflow",
+    "工作流",
+    "one-person business",
+    "一人公司",
+    "small business",
+    "小微企业",
+    "ecommerce",
+    "电商",
+    "productivity",
+    "效率"
+  ]
 }
