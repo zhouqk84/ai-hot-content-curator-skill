@@ -6,16 +6,58 @@
   },
   "discovery_sources": [
     {
-      "name": "AIHot",
-      "type": "aihot",
-      "layer": "chinese_heat",
-      "url": "https://aihot.today/"
+      "name": "OpenAI News",
+      "type": "rss",
+      "layer": "official",
+      "url": "https://openai.com/news/rss.xml"
     },
     {
-      "name": "Google Blog",
+      "name": "Google AI Blog",
       "type": "rss",
       "layer": "official",
       "url": "https://blog.google/innovation-and-ai/technology/ai/rss/"
+    },
+    {
+      "name": "Microsoft AI",
+      "type": "rss",
+      "layer": "official",
+      "url": "https://news.microsoft.com/source/topics/ai/feed/"
+    },
+    {
+      "name": "GitHub Blog AI & ML",
+      "type": "rss",
+      "layer": "official",
+      "url": "https://github.blog/ai-and-ml/feed/"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "type": "rss",
+      "layer": "official",
+      "url": "https://huggingface.co/blog/feed.xml"
+    },
+    {
+      "name": "NVIDIA Deep Learning",
+      "type": "rss",
+      "layer": "official",
+      "url": "https://blogs.nvidia.com/blog/category/enterprise/deep-learning/feed/"
+    },
+    {
+      "name": "AWS Machine Learning Blog",
+      "type": "rss",
+      "layer": "official",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/"
+    },
+    {
+      "name": "TechCrunch AI",
+      "type": "rss",
+      "layer": "industry_media",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+    },
+    {
+      "name": "The Decoder",
+      "type": "rss",
+      "layer": "industry_media",
+      "url": "https://the-decoder.com/feed/"
     },
     {
       "name": "Simon Willison",
@@ -34,6 +76,36 @@
       "type": "rss",
       "layer": "expert_discovery",
       "url": "https://www.latent.space/feed"
+    },
+    {
+      "name": "Import AI",
+      "type": "rss",
+      "layer": "expert_discovery",
+      "url": "https://importai.substack.com/feed"
+    },
+    {
+      "name": "Interconnects",
+      "type": "rss",
+      "layer": "expert_discovery",
+      "url": "https://www.interconnects.ai/feed"
+    },
+    {
+      "name": "量子位",
+      "type": "rss",
+      "layer": "chinese_media",
+      "url": "https://www.qbitai.com/feed"
+    },
+    {
+      "name": "少数派",
+      "type": "rss",
+      "layer": "chinese_media",
+      "url": "https://sspai.com/feed"
+    },
+    {
+      "name": "阮一峰网络日志",
+      "type": "rss",
+      "layer": "chinese_media",
+      "url": "https://feeds.feedburner.com/ruanyifeng"
     }
   ],
   "verification_domains": [
